@@ -1,0 +1,70 @@
+.register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px gray;
+    z-index: 100;
+    padding: 0 0 50px 0; 
+}
+.modal-close {
+    align-self: flex-end;
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.register input {
+    height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+    box-shadow: .1px .1px 8px gray;
+    width: 400px;
+    
+}
+
+.register button {
+    background: rgba(34, 31, 59, .8);
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.register button:hover {
+    background: rgba(34, 31, 59);
+}
+
+.register p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1375px) {
+    .register {
+        width: 550px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .register {
+        width: 100%;
+    }
+
+    .register input { 
+        width: 90%;
+    }
+}

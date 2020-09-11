@@ -1,0 +1,56 @@
+.profile-icon {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.menu-container:focus {
+    outline: black;
+}
+
+.menu  {
+    width: 140px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    position: absolute;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.menu p {
+    text-align: center;
+    transition: all .2s ease-in-out;
+    margin: 0;
+    padding: 10px 0;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+
+}
+
+.menu p:hover {
+    background: #252830;
+    color: #fff;
+}
+
+
+.animationFadeIn {
+    animation: fadeIn;
+    animation-duration: .3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
