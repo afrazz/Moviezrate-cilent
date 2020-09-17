@@ -21,8 +21,6 @@ class App extends React.Component {
     }
   }
 
-  abortController = new AbortController()
-
   // When user visits the page the movie api will be called and save the data in movies state
   componentDidMount() {
     this.setState({isLoading: true})
