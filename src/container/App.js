@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setState({isLoading: true})
     this.gettingUserWithToken()
     const random = uniqueRandom(1, 400);
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${YOUR_API_KEY}&language=en-US&page=${random()}`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=51bd054dc73d06795893ef3234298dc8&language=en-US&page=${random()}`) // Add your own API key here
     .then(resp => resp.json())
     .then(data => {
       if(data.results) {
@@ -109,7 +109,7 @@ class App extends React.Component {
     this.setState({isLoading: true})
     this.setState({movies: [], availableMovies: []})
       const random = uniqueRandom(1, 400);
-      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${YOUR_API_KEY}&language=en-US&page=${random()}`)
+      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=51bd054dc73d06795893ef3234298dc8&language=en-US&page=${random()}`) // Add your own API key here
       .then(resp => resp.json())
       .then(data => {
         if(data.results) {
@@ -124,7 +124,7 @@ class App extends React.Component {
   updateLanguageGenre = (lang, genre) => {
     this.setState({movies: [], availableMovies: [], lang: lang, genre: genre, isLoading: true})
     let random = uniqueRandom(1, 400);
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${YOUR_API_KEY}&language=${lang}&with_genres=${genre}&page=${random()}`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=51bd054dc73d06795893ef3234298dc8&language=${lang}&with_genres=${genre}&page=${random()}`) // Add your own API key here
     .then(resp => resp.json())
     .then(data => {
       if(data.results) {
@@ -156,7 +156,7 @@ class App extends React.Component {
     if(count + 1 >= 18) { 
       const random = uniqueRandom(1, 400);
       this.setState({isLoading: true})
-      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${YOUR_API_KEY}&language=${this.state.lang}&with_genres=${this.state.genre}&page=${random()}`)
+      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=51bd054dc73d06795893ef3234298dc8&language=${this.state.lang}&with_genres=${this.state.genre}&page=${random()}`) // Add your own API here
       .then(resp => resp.json())
       .then(data => { 
         if(data.results) {
